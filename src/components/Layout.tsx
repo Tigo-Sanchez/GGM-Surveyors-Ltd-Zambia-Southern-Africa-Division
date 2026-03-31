@@ -40,13 +40,13 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="relative min-h-screen selection:bg-black selection:text-[#FFFF00] dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Navigation Bar */}
-        <nav className="fixed top-0 w-full z-50 glass-panel px-4 md:px-8 py-4 flex justify-between items-center transition-colors duration-300">
+        <nav className="fixed top-0 w-full z-50 glass-panel px-4 md:px-8 py-3 md:py-4 flex justify-between items-center transition-colors duration-300">
           <Link to="/" className="z-50">
-            <img src={LOGO_SURVEYORS_W} alt="GGM Surveyors" className="h-10 md:h-16 invert dark:invert-0 transition-all duration-300" />
+            <img src={LOGO_SURVEYORS_W} alt="GGM Surveyors" className="h-16 sm:h-20 md:h-16 invert dark:invert-0 transition-all duration-300" />
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 text-editorial items-center font-bold">
+          <div className="hidden lg:flex space-x-8 text-editorial items-center font-bold">
             <Link to="/" className="hover:text-black/50 dark:hover:text-white/50 transition-colors">Executive Brief</Link>
             <Link to="/pillars" className="hover:text-black/50 dark:hover:text-white/50 transition-colors">40 Strategic Pillars</Link>
             <button 
@@ -64,8 +64,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             </Link>
           </div>
           
-          {/* Mobile Controls */}
-          <div className="md:hidden flex items-center gap-2 z-50">
+          {/* Mobile & Tablet Controls */}
+          <div className="lg:hidden flex items-center gap-2 z-50">
             <button 
               onClick={() => setIsDark(!isDark)}
               className="p-2 hover:bg-black/5 dark:hover:bg-white/10 transition-colors rounded-full"
@@ -131,26 +131,26 @@ export default function Layout({ children }: { children: ReactNode }) {
         </main>
 
         {/* Footer */}
-        <footer className="py-12 px-4 md:px-8 flex flex-col items-center justify-center mt-16 transition-colors duration-300">
+        <footer className="pt-[46px] pb-[10px] px-8 flex flex-col items-center justify-center mt-[-66px] mb-[57px] md:max-lg:pt-[10px] md:max-lg:pb-[22px] md:max-lg:mt-0 md:max-lg:mb-0 md:mt-16 md:mb-0 transition-colors duration-300">
           <a href="https://ggm.earth" target="_blank" rel="noopener noreferrer">
-            <img src={LOGO_GGM_EARTH} alt="GGM Earth" className="h-16 md:h-32 opacity-80 mb-12 dark:invert transition-all duration-300 hover:opacity-100" />
+            <img src={LOGO_GGM_EARTH} alt="GGM Earth" className="w-[202px] h-[118px] object-contain opacity-80 mb-8 md:mb-12 dark:invert transition-all duration-300 hover:opacity-100" />
           </a>
           <div className="text-editorial text-black/60 dark:text-white/60 text-center leading-relaxed tracking-widest text-xs md:text-sm transition-colors duration-300 flex flex-col items-center gap-1">
             <p className="font-bold text-sm md:text-base text-black dark:text-white mb-2">GGM SURVEYORS COMPANY LTD.</p>
-            <p className="uppercase">ZAMBIA | Southern Africa Operational Division</p>
-            <p>49 Tanzania Road - Ndola, Zambia</p>
+            <p className="uppercase text-[9px] md:text-xs">ZAMBIA | Southern Africa Operational Division</p>
+            <p className="text-[8px] md:text-xs">49 Tanzania Road - Ndola, Zambia</p>
             
             <div className="w-8 h-px bg-black/20 dark:bg-white/20 my-4"></div>
             
             <p className="font-bold uppercase text-black dark:text-white">COMPANY REGISTRATION</p>
-            <p>No. 1204567 | TPIN 100-456-789-0</p>
-            <p>Phone: +260 977614352 | E-Mail: zambia@ggm.earth</p>
-            <a href="https://zambia-div.ggm.earth" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-[#FFFF00] transition-colors break-all">https://zambia-div.ggm.earth</a>
+            <p className="text-[10px] md:text-xs">No. 1204567 | TPIN 100-456-789-0</p>
+            <p className="text-[8px] pt-[15px] font-bold">Phone: +260 977614352 | E-Mail: zambia@ggm.earth</p>
+            <a href="https://zambia-div.ggm.earth" target="_blank" rel="noopener noreferrer" className="bg-[#FFFF00] text-black underline hover:text-black dark:hover:text-[#FFFF00] transition-colors break-all px-1 text-[10px]">https://zambia-div.ggm.earth</a>
             
             <div className="w-8 h-px bg-black/20 dark:bg-white/20 my-4"></div>
             
-            <p className="uppercase font-bold text-black dark:text-white">Regional Hub for Southern Africa – Geophysical Intelligence & Field Operations</p>
-            <p className="uppercase">Operational Brand of <a href="https://ggm.earth" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-[#FFFF00] transition-colors underline underline-offset-4">GGM.EARTH</a></p>
+            <p className="uppercase font-bold text-black dark:text-white text-[10px] md:text-xs">Regional Hub for Southern Africa – Geophysical Intelligence & Field Operations</p>
+            <p className="uppercase text-[10px] bg-[#FFFF00] text-black px-2 py-1 md:max-lg:mt-0 md:max-lg:mb-0 md:max-lg:pb-[4px]">Operational Brand of <a href="https://ggm.earth" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors underline underline-offset-4">GGM.EARTH</a></p>
           </div>
         </footer>
       </div>
